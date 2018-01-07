@@ -40,7 +40,7 @@ axios.get(geocodeUrl).then((res) => {
   var city = res.config.params.city;
 
   console.log(`The current temperature in ${city} is ${Math.round(temperature)} degrees.`);
-  console.log(`It will be ${weatherSummary.toLowerCase()}`);
+  console.log(`Forecast: ${weatherSummary}`);
 }).catch((err) => {
   if (err.code === 'ENOTFOUND') {
     console.log('Unable to connect to API servers');
